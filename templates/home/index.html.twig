@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Taraji History{% endblock %}
+
+{% block body %}
+<header>
+    <h1>الترجي الرياضي التونسي</h1>
+</header>
+<main>
+        {% for event in evenements %}
+        <article id="carte" class="carte" data-video="{{ asset('assets/upload/videos/'~ event.video ~'') }}" data-title="{{event.titre}}" data-description="{{event.description}}">
+            <div class="video_container">
+                <div class="linear_bg">
+                </div>
+                <video src="{{ asset('assets/upload/videos/'~ event.video ~'') }}" autostart=false 
+                type="video/mp4" controlslist=nodownload></video>
+            </div>
+            <div class="titre_container">
+                <h2>{{event.titre}}</h2>
+            </div>
+        </article>
+        {% endfor %}
+</main>
+    
+
+{% endblock %}

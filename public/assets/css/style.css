@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #0D0D0D;
+    width: 100vw;
+}
+header{
+    text-align: center;
+    padding: 3rem;
+}
+h1{
+    color: #BF8845;
+    font-family: 'Aref Ruqaa', serif;
+}
+h2{
+    color: #BF8845;
+    font-family: 'Aref Ruqaa', serif;
+}
+p{
+    color: gray;
+    font-size: large;
+}
+main{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 1rem;
+}
+article{
+    width: 25rem;
+    height: 15rem;
+    background-color: #465973;
+    position: relative;
+}
+.video_container{
+    width:100%;
+    height: 100%;
+    z-index: 1;
+    
+}
+.linear_bg{
+    background: linear-gradient(0deg, rgba(13,13,13,0.8113620448179272) 0%, rgba(70,89,115,0.7189250700280112) 100%);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.titre_container{
+    position: absolute;
+    bottom: 0;
+    padding-left: 1rem;
+}
+/* CSS pour la fenêtre modale */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fond semi-transparent pour assombrir l'arrière-plan */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .modal div{
+    width: 60%;
+    min-height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .modal div p{
+    text-align: center;
+  }
+  /* Optionnel : styliser la taille de la vidéo dans la fenêtre modale */
+  .modal video {
+    max-width: 90%;
+    max-height: 90%;
+  }
